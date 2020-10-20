@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "type-inference-beginner", "type-inference-beginner\type-inference-beginner.fsproj", "{2B555156-DD77-4896-A5E2-D538DBDDF3AF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2B555156-DD77-4896-A5E2-D538DBDDF3AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B555156-DD77-4896-A5E2-D538DBDDF3AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B555156-DD77-4896-A5E2-D538DBDDF3AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B555156-DD77-4896-A5E2-D538DBDDF3AF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
