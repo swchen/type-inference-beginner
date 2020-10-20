@@ -364,8 +364,10 @@ let test3 () =
     printfn "Test: let id = x -> x in id(i)"
     try
         let c = LetExp(name = "id",
-                        rhs = FunctionExp(param = "x", body = VarExp("x")),
-                        body = CallExp(func = VarExp("id"),  arg = IntExp(1)))
+                       rhs = FunctionExp(param = "x",
+                                         body = VarExp("x")),
+                       body = CallExp(func = VarExp("id"),
+                                      arg = IntExp(1)))
         let (t, _) = infer(env, c)
         printfn "%A" (typeToString(t))
     with
