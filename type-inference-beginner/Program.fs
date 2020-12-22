@@ -215,6 +215,7 @@ let rec infer(env : Map<string, Type>, exp: Expression) =
         | Some(t) ->
             match t with
             | ForAllType(quantifiers, tp) ->
+                // instantiate
                 let mutable subst = Map.empty
                 for quantifier in quantifiers do
                     subst <- subst.Add(quantifier, newTVar())
@@ -241,7 +242,7 @@ let rec infer(env : Map<string, Type>, exp: Expression) =
         let s3 = composeSubst(s1, s2)
 
         (bodyType, s3)
-
+    // CallExp, IfExp 部分简化, 是否可行?
     | CallExp(func, arg) ->
         let (funcType, s1) = infer(env, func)
         let (argType, s2) = infer(applySubstToEnv(s1, env), arg)
@@ -275,6 +276,7 @@ let rec infer(env : Map<string, Type>, exp: Expression) =
 
     | _ ->  raise(InferException("NotImplemented"))
 
+// 原文实现:
 //    | CallExp(func, arg) ->
 //        let (funcType, s1) = infer(env, func)
 //        let (argType, s2) = infer(applySubstToEnv(s1, env), arg)
