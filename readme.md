@@ -27,8 +27,8 @@ Test: 1 + 2
 ------------------------
 Test: true + false
 "Type mismatch:
-    Expected Bool
-    Found Int"
+    Expected Int
+    Found Bool"
 ------------------------
 Test: let id = x -> x in id(i)
 "Int"
